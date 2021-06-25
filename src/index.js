@@ -29,8 +29,8 @@ startButton.addEventListener('click', () => {
     div.setAttribute('id', 'btnContainer');
     document.body.append(div);
     
-    createSentence('You chose Rock', div);
-    createSentence('Opponent chose ' + rockPaperScissors[opponent], div);
+    createSentence('You chose Rock.', div);
+    createSentence('Opponent chose ' + rockPaperScissors[opponent] + ".", div);
     endResults(2,1,opponent, div);
 
 
@@ -47,8 +47,8 @@ startButton.addEventListener('click', () => {
     div.setAttribute('id', 'btnContainer');
     document.body.append(div);
     
-    createSentence('You chose Paper', div);
-    createSentence('Opponent chose ' + rockPaperScissors[opponent], div);
+    createSentence('You chose Paper.', div);
+    createSentence('Opponent chose ' + rockPaperScissors[opponent] + ".", div);
     endResults(0,2,opponent, div);
   });
   scissorsButton.addEventListener('click', () => {
@@ -63,25 +63,27 @@ startButton.addEventListener('click', () => {
     div.setAttribute('id', 'btnContainer');
     document.body.append(div);
     
-    createSentence('You chose Scissors', div);
-    createSentence('Opponent chose ' + rockPaperScissors[opponent], div);
+    createSentence('You chose Scissors.', div);
+    createSentence('Opponent chose ' + rockPaperScissors[opponent] + ".", div);
     endResults(1,0,opponent, div);
   });
   
 })
 
+//function determines where to place a statement inputted
 function createSentence(statement, where) {
   let p = document.createElement('p');
-  p.textContent = statement + '.';
+  p.textContent = statement;
   where.append(p);
 }
 
+//function decides who wins
 function endResults(winningCondition, losingCondition, opponent, where) {
   if (opponent == winningCondition) {
-    createSentence('You won', where);
+    createSentence('You Won!', where);
   } else if (opponent == losingCondition) {
-    createSentence('You lost', where);
+    createSentence('You Lost..', where);
   } else {
-    createSentence('Tie', where);
+    createSentence('Tie.', where);
   }
 }
