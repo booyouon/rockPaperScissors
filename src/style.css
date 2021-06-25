@@ -1,0 +1,14 @@
+body {
+    font-family: sans-serif;
+  }
+  
+  button {
+    padding: 5px;
+    cursor: pointer;
+    padding: 8px 20px;
+  }
+  
+  button:hover {
+    background-color: black;
+    color: white;
+  }
