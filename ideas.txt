@@ -1,0 +1,4 @@
+Future ideas:
+- Point tracker
+- 2 players
+- Add Transitions
